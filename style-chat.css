@@ -14,6 +14,7 @@
     width: 100%;
     height: 100vh;
     background: #32363F;
+    display: none;
 }
 
 .partyMobile{
@@ -42,11 +43,11 @@
 }
 
 .hero{
+    overflow-y: auto;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
     height: 100%;
     gap: 18px;
     padding: 18px 24px;
@@ -100,13 +101,25 @@
     padding: 16px 12px;
 }
 
+.heroBtnSendContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 90px);
+}
+
+
+
+
 @media screen and (min-width: 834px) {
     .container{
         flex-direction: row;
     }
 
+
+
     .heroBtnSendContainer{
-        outline: solid 1px red;
+        height: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -132,7 +145,7 @@
         gap: 21px;
     }
     
-    .partyDesktop button{
+    .partyDesktop .blue-btn{
         display: flex;
         justify-content: center;
         margin-top: 33px;
@@ -149,6 +162,13 @@
         background: #131117;
     }
 
+}
+
+.clear-btn{
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
  
     

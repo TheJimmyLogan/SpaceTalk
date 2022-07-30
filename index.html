@@ -6,33 +6,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-chat.css">
+    <script src="script.js" defer></script>
     <title>Document</title>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-login">
         <section class="login">
             <section class="space">
                 <img src="./icons/spaceTalk.svg" width="190px" alt="" />
             </section>
 
             <section class="heroInputBtnContainer">
-                <section class="hero">
+                <section class="hero-login">
                     <h1>Войти в чат</h1>
                     <h2>Привет, Незнакомец!</h2>
                 </section>
 
                 <section class="inp-name">
-                    <input type="text" placeholder="Имя" />
+                    <input id="loginNameInput" type="text" placeholder="Имя" />
                 </section>
 
                 <section class="btn-open">
-                    <button>Войти</button>
+                    <button id="enterChatBtn">Войти</button>
                 </section>
             </section>
         </section>
 
     </div>
+
+    <div class="container">
+
+        <section class="inp-space">
+            <section class="partyMobile">
+                <img src="./icons/chat/space.svg" width="40px" alt="">
+                <input type="text" placeholder="Участники группы">
+            </section>
+            <section class="partyDesktop">
+                <section class="img-partyDesktop">
+                    <button id="goBackToLoginBtn" class="clear-btn">
+                        <img src="./icons/chat/space.svg" alt="">
+                    </button>
+                    <h1>Участники</h1>
+                </section>
+                <section id="partyMembersSection" class="party-members">
+
+                </section>
+            </section>
+        </section>
+
+        <section class="heroBtnSendContainer">
+            <section class="hero">
+                <div class="hi-sms">Привет, норм как сам</div>
+                <div class="hi-sms2">Здорово, как дела?</div>
+            </section>
+
+            <section class="btn-send">
+                <input type="text" placeholder="Сообщение">
+                <button>Отправить</button>
+            </section>
+        </section>
+
+
+    </div>
+
 </body>
 
 </html>
