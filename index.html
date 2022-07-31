@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-chat.css">
     <script src="script.js" defer></script>
@@ -21,7 +21,7 @@
             <section class="heroInputBtnContainer">
                 <section class="hero-login">
                     <h1>Войти в чат</h1>
-                    <h2>Привет, Незнакомец!</h2>
+                    <h2>Привет, Незнакомец / (мка) !</h2>
                 </section>
 
                 <section class="inp-name">
@@ -29,7 +29,7 @@
                 </section>
 
                 <section class="btn-open">
-                    <button id="enterChatBtn">Войти</button>
+                    <button id="enterChatBtn" disabled>Войти</button>
                 </section>
             </section>
         </section>
@@ -40,8 +40,15 @@
 
         <section class="inp-space">
             <section class="partyMobile">
-                <img src="./icons/chat/space.svg" width="40px" alt="">
-                <input type="text" placeholder="Участники группы">
+                <button id="goBackToLoginBtn" class="clear-btn">
+                    <img src="./icons/chat/space.svg" alt="" width="40px">
+                </button>
+
+                <select id="partySelectMobile" class="party-select">
+                    <option>Участники</option>
+                </select>
+                <!-- <input type="text" placeholder="Участники группы"> -->
+
             </section>
             <section class="partyDesktop">
                 <section class="img-partyDesktop">

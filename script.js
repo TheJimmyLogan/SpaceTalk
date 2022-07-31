@@ -9,14 +9,29 @@ const enterChat = () => {
     document.getElementById('partyMembersSection').append(memberBtn)
 
 
-
-    // <button class="blue-btn">Эрик</button>
+    const memberOption = document.createElement('option');
+    memberOption.innerText = loginName
+    document.getElementById('partySelectMobile').append(memberOption);
 }
+
 document.getElementById('enterChatBtn').addEventListener('click', enterChat);
 
-const goBackToLogin = () => {
+const goBackToLogin = (e) => {
     document.querySelector('.container-login').style.display = "flex"
     document.querySelector('.container').style.display = "none"
 }
-document.getElementById('goBackToLoginBtn').addEventListener('click', goBackToLogin);
+document.querySelectorAll('#goBackToLoginBtn').forEach(
+    btn => btn.addEventListener('click', goBackToLogin)
+);
+
+const enableEnterChatBtn = (e) => {
+    if (e.target.value) {
+        document.getElementById('enterChatBtn').disabled = false;
+    } else {
+        document.getElementById('enterChatBtn').disabled = true;
+    }
+}
+
+document.getElementById('loginNameInput').addEventListener('input', enableEnterChatBtn);
+
 
