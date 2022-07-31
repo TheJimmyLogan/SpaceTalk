@@ -2,6 +2,7 @@ const resizeVh = () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`)
 }
+resizeVh();
 
 const enterChat = () => {
     document.querySelector('.container-login').style.display = "none"
