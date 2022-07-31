@@ -17,6 +17,14 @@
     height: calc(var(--vh, 1vh) * 100);
 }
 
+.version{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    font-size: 10px;
+}
+
 .login{
     max-width: 328px;
     width: 100%;
