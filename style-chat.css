@@ -15,6 +15,7 @@
     height: 100vh;
     background: #32363F;
     display: none;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .partyMobile{
